@@ -9,6 +9,7 @@
 
 ## 配置文件
 ```
+// config.js
 export default {
   // 开启map
   sourcemaps: false,
