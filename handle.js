@@ -33,12 +33,12 @@ function argFilter(index, content, argvs) {
 
 // 监听
 watch(['./src/**/*.js'], function (cb) {
-  console.log('监听到js文件变化')
+  console.log('\n监听到js文件变化')
   handleJs()
   cb();
 })
 watch(['./src/**/*.scss'], function (cb) {
-  console.log('监听到css文件变化')
+  console.log('\n监听到css文件变化')
   handleCss()
   cb();
 })
