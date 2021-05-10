@@ -1,5 +1,8 @@
 import { dest, src } from 'gulp'
 
+
+import del from 'del';
+
 import config from "../config"
 import { mode, plumber } from "../handle";
 
@@ -33,6 +36,11 @@ var uglifyOption = {
 }
 
 function handleJs() {
+
+  console.info('清理 js')
+  del('./config/temp/*.js')
+  del(`${config.dest.js}*.js`)
+
   config.src.js.map(function (path) {
     var name = path.match(/\/([^\/^.]+)\.[^\/]*$/)[1];
     console.info('开始处理js')
